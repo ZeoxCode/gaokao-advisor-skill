@@ -1,0 +1,17 @@
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Local editor and environment files
+.idea/
+.vscode/
+*.swp
+*.swo
+.env
+.env.*
+
+# Runtime caches
+__pycache__/
+.pytest_cache/
+node_modules/
+
