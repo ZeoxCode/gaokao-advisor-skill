@@ -232,4 +232,4 @@ gaokao-advisor/
 
 ## License
 
-建议采用 [MIT License](https://opensource.org/licenses/MIT)（可按需替换）。
+本项目采用 [MIT License](https://opensource.org/licenses/MIT) 开源许可。你可以自由使用、复制、修改和分发本项目内容，但请保留原作者与许可声明。
