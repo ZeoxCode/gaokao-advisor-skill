@@ -182,29 +182,43 @@ cp -R gaokao-advisor ~/.gemini/antigravity-cli/skills/
 
 ---
 
+## 示例输出
+
+想先看它实际会怎么工作，可以阅读完整对话示例：
+
+- [山东物化生女生 3 万位次：从初筛到学校体检](examples/shandong-full-dialogue-demo.md)
+
+这个示例按「用户提问 → gaokao-advisor 回答」展示三轮流程：先做阶段一报志愿初筛，再选择 A 对比“计算机/电子信息 vs 师范”两条赛道，最后选择 D 进入山东科技大学学校体检。它展示的是工作流和输出结构；真实填报前，所有位次、招生计划、就业数据和学校线索都需要以当年官方数据与多源检索复核。
+
+---
+
 ## 仓库结构
 
 ```
-gaokao-advisor/
-├── SKILL.md                       # 主控制台：定位、铁律、阶段分流、工作流
-└── references/
-    ├── flow-guide.md              # 流程引导编排（岔路口 + 默认推荐 + 全程记忆）
-    │
-    ├── p1-select-school.md        # 选校策略：位次/红线/填满规则/录取后坑/大小年博弈
-    ├── p2-select-major.md         # 选专业：避坑/专业档案/身体门槛/资格证/试错成本
-    ├── p3-rank-engine.md          # 位次换算引擎：自己算 + 六条核验刹车 + 预估也出
-    ├── p4-city.md                 # 地域：产业池/城市群辐射/落户/情感账
-    ├── p5-employment.md           # 就业：三种流向/上岸指标/带名字的雇主红黑榜
-    ├── p6-pragmatic.md            # 功利现实：婚恋市场价值 + 家庭资源变现
-    ├── p7-downturn-survival.md    # 下行期生存：反脆弱专业/阶级功能/抗跌资产
-    │
-    ├── c1-dimensions.md           # 学校体检八维判断标准 + 颗粒度清单
-    ├── c2-search-playbook.md      # 检索剧本：逐条可抄（含外网/存档/暗规则/信源分级）
-    ├── c3-sources.md              # 权威数据源清单
-    ├── c4-report-template.md      # 体检报告模板 + 横向对比 + 风险总账
-    ├── c5-major-verification.md   # 专业核实：两层穿透 + 就业出口硬红线
-    ├── c6-campus-survival.md      # 入学后生存：选课/给分老师/保研操作/避雷导师
-    └── c7-gpa-economics.md        # 绩点经济学：给分/学分/挂科如何影响保研与出国
+.
+├── gaokao-advisor.skill            # Claude 可直接上传的 Skill 包
+├── gaokao-advisor/
+│   ├── SKILL.md                    # 主控制台：定位、铁律、阶段分流、工作流
+│   └── references/
+│       ├── flow-guide.md           # 流程引导编排（岔路口 + 默认推荐 + 全程记忆）
+│       │
+│       ├── p1-select-school.md     # 选校策略：位次/红线/填满规则/录取后坑/大小年博弈
+│       ├── p2-select-major.md      # 选专业：避坑/专业档案/身体门槛/资格证/试错成本
+│       ├── p3-rank-engine.md       # 位次换算引擎：自己算 + 六条核验刹车 + 预估也出
+│       ├── p4-city.md              # 地域：产业池/城市群辐射/落户/情感账
+│       ├── p5-employment.md        # 就业：三种流向/上岸指标/带名字的雇主红黑榜
+│       ├── p6-pragmatic.md         # 功利现实：婚恋市场价值 + 家庭资源变现
+│       ├── p7-downturn-survival.md # 下行期生存：反脆弱专业/阶级功能/抗跌资产
+│       │
+│       ├── c1-dimensions.md        # 学校体检八维判断标准 + 颗粒度清单
+│       ├── c2-search-playbook.md   # 检索剧本：逐条可抄（含外网/存档/暗规则/信源分级）
+│       ├── c3-sources.md           # 权威数据源清单
+│       ├── c4-report-template.md   # 体检报告模板 + 横向对比 + 风险总账
+│       ├── c5-major-verification.md # 专业核实：两层穿透 + 就业出口硬红线
+│       ├── c6-campus-survival.md   # 入学后生存：选课/给分老师/保研操作/避雷导师
+│       └── c7-gpa-economics.md     # 绩点经济学：给分/学分/挂科如何影响保研与出国
+└── examples/
+    └── shandong-full-dialogue-demo.md # 山东案例：从初筛到学校体检的完整对话示例
 ```
 
 ---
